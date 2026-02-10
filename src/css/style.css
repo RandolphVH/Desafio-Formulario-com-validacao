@@ -13,4 +13,56 @@ body {
     height: 100vh;
     grid-template-areas: "info form";
     grid-template-columns: 1fr 1fr;
+    background-image: url(../../images/Group\ 9.png);
+    background-size: cover;
+}
+
+.info {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    gap: 11px;
+    max-width: 300px;
+    max-height: 111px;
+    color: #fff;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.text {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.form {
+    grid-area: form;
+    width: 340px;
+    height: 378px;
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form input {
+    width: 298.01px;
+    height: 35.11px;
+    border-radius: 5px;
+    border: 1px solid #808080;
+}
+
+.form input::placeholder {
+    padding: 8px 9px;
+    font-weight: bold;
+    color: #a8a8a8;
+}
+
+#message {
+    width: 298.01px;
+    height: 100px;
 }
