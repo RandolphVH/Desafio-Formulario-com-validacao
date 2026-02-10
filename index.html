@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio - Formulário com validação</title>
     <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="src/css/responsive.css">
 </head>
 
 <body>
@@ -15,17 +16,19 @@
             menos de 24h.</p>
     </div>
     <form class="form">
-        <input type="text" id="name" name="name" placeholder="Nome Completo*">
-        <br><br>
-        <input type="email" id="email" name="email" placeholder="Email*">
-        <br><br>
-        <input type="tel" id="phone" name="phone" placeholder="Telefone*">
-        <br><br>
-        <input type="text" id="message" name="message" placeholder="Mensagem*">
-        <p>*campos obrigatórios</p>
-        <br><br>
+        <input type="text" id="name" name="name" maxlength="40" placeholder="Nome Completo*">
+        <p class="required-field none" id="name-error">campo obrigatório</p>
+        <input type="email" id="email" name="email" maxlength="40" placeholder="Email*">
+        <p class="required-field none" id="email-error">campo obrigatório</p>
+        <input type="tel" id="phone" name="phone" maxlength="11" placeholder="Telefone*">
+        <p class="required-field none" id="phone-error">campo obrigatório</p>
+        <textarea id="message" name="message" maxlength="500" placeholder="Mensagem*"></textarea>
+        <p class="required-field none" id="message-error">campo obrigatório</p>
+        <p class="required">*campos obrigatórios</p>
         <input class="submit-btn" type="submit" value="Enviar">
     </form>
+
+    <script src="./src/js/index.js"></script>
 </body>
 
 </html>

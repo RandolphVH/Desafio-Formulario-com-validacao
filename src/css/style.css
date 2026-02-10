@@ -27,6 +27,7 @@ body {
     max-width: 300px;
     max-height: 111px;
     color: #fff;
+    margin: 20px;
 }
 
 .title {
@@ -47,22 +48,66 @@ body {
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
+    margin: 20px;
 }
 
 .form input {
     width: 298.01px;
     height: 35.11px;
     border-radius: 5px;
-    border: 1px solid #808080;
+    border: 1px solid #000;
+    padding: 0 9px;
 }
 
 .form input::placeholder {
-    padding: 8px 9px;
     font-weight: bold;
     color: #a8a8a8;
 }
 
-#message {
+.form textarea {
     width: 298.01px;
-    height: 100px;
+    min-height: 100px;
+    padding: 8px 9px;
+    resize: none;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.form textarea::placeholder {
+    font-weight: bold;
+    color: #a8a8a8;
+}
+
+.required {
+    font-size: 15px;
+    font-weight: 400;
+    margin: 11px 0;
+}
+
+.form input.submit-btn {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #3CCC87;
+    border: none;
+    cursor: pointer;
+}
+
+.form input.filled {
+    border: 1px solid green;
+}
+
+.form input.obrigatory {
+    border: 1px solid red;
+}
+
+.required-field {
+    color: red;
+    font-size: 8px;
+    font-weight: 400;
+    margin: 0 100px 6px 0;
+}
+
+.none {
+    display: none;
 }
