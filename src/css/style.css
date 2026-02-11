@@ -52,6 +52,10 @@ body {
     margin: 20px;
 }
 
+.form input:focus, .form textarea:focus {
+    outline: none;
+}
+
 .form input {
     width: 100%;
     height: 45.11px;
@@ -98,11 +102,11 @@ body {
     cursor: pointer;
 }
 
-.form input.filled {
+.form input.filled, .form textarea.filled {
     border: 1px solid green;
 }
 
-.form input.obrigatory {
+.form input.obrigatory, .form textarea.obrigatory {
     border: 1px solid red;
 }
 
@@ -113,6 +117,6 @@ body {
     margin: 0 200px 6px 0;
 }
 
-.none {
+.form p.none {
     display: none;
 }
