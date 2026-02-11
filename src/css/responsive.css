@@ -1,6 +1,22 @@
 @media (max-width: 768px) {
-    body{
+    body {
         grid-template-areas: "info" "form";
         grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    .info {
+        width: 90%;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .title, .text{
+        font-size: 140%;
+    }
+
+    .form {
+        width: 90%;
+        height: auto;
     }
 }
