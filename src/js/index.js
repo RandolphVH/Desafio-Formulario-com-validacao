@@ -33,12 +33,18 @@ function validateField(item) {
         item.field.classList.add('obrigatory');     // Campo vazio, marca como obrigatório
         item.error.classList.remove('none');        // Mostra mensagem de erro
         item.field.classList.remove('filled');      // Remove 'filled'
+
+        item.field._wasInvalid = true;
+
         return false;
     } else { // Campo NÃO está vazio
         item.field.classList.remove('obrigatory');  // Remove 'obrigatory'
         item.error.classList.add('none');           // Esconde mensagem de erro
-        item.field.classList.add('filled');
-        return true;
+
+        if (item.field._wasInvalid) {
+            item.field.classList.add('filled');
+            return true;
+        }
     }
 }
 
@@ -56,8 +62,12 @@ form.addEventListener('submit', (event) => {
 
     // Valida todos os campos ao submeter o formulário
     fieldsToValidate.forEach(item => {
-        if (!validateField(item)) { // Se qualquer campo for inválido, o formulário é inválido
+       const isEmpty = item.field.value.trim() === '';
+        if (isEmpty) {
+            validateField(item);  // marca visual vermelho
             formIsValid = false;
+        } else {
+            validateField(item);  // marca visual (verde ou neutro)
         }
     });
 
